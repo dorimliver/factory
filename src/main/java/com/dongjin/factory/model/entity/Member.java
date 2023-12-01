@@ -1,12 +1,14 @@
 package com.dongjin.factory.model.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.hibernate.annotations.Comment;
 
 import java.time.ZonedDateTime;
 
 @Entity
+@Data
 public class Member {
 
     @Id
@@ -31,4 +33,8 @@ public class Member {
     @Comment("수정 일시")
     @NotNull
     private ZonedDateTime modified;
+
+    @Comment("수정 일시")
+    @NotNull
+    private String roles;
 }
